@@ -234,4 +234,4 @@ class PersonClass {
 const personC1 = new PersonClass('John', 'Doe', '11-23-1998', 23);
 const personC2 = new PersonClass('beth', 'dawn', '5-3-1996', 44)
 console.log(personC2.getBirthYear());
-console.log(personC2.getFullName());  
+console.log(personC2.getFullName());

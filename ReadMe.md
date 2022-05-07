@@ -24,3 +24,7 @@
 ### Loops
 
 - <https://www.w3schools.com/js/js_loop_for.asp>
+
+### Mouse Events
+- https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events
+- https://stackoverflow.com/questions/1819878/changing-button-color-programmatically
