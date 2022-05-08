@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <h1>JS For Beginners</h1>
+    <header> 
+      <h1 id="title123">JS For Beginners</h1>
     </header>
 
     <section class="container">
@@ -21,7 +21,11 @@
           <input type="text" id="name">
         </div>
         <div>
-          <label for="email">Email:</label>
+          <select title="ID" class="form-control mr-2" id="dropDown">
+              <option id="dropDown" value="1"> Email</option>
+              <option id="dropDown" value="2"> Address</option>
+              <option id="dropDown"  value="3"> SSN</option>
+          </select>
           <input type="text" id="email">
         </div>
         <input class="btn" type="submit" value="Submit">
@@ -36,6 +40,6 @@
       </ul>
     </section>
     
-        <script src="..\diastic.js"></script>
+        <script src="myMain.js"></script>
   </body>
 </html>

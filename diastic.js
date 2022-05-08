@@ -51,7 +51,7 @@ items.forEach((item) => console.log(item.innerHTML = (item.innerHTML + " 122")))
 
 
 const ul = document.querySelector('.items');
-//ul.remove();
+//ul.remove();d
 ul.firstElementChild.textContent = 'Hello Kelsey!';
 ul.children[1].innerText = "Hello Maks";
 ul.lastElementChild.innerHTML = '<h1>Hello Ezra</h>';
@@ -65,6 +65,7 @@ btn.style.height = '100px';
 btn.style.width = '100px';
 btn.style.color = 'red';
 btn.style.textAlign = 'left';
+// add event listeners here or in the HTML like for btn2 
 //Events listner for mouseover then (e) => gives a direct command or after event ex: click, a funciton name as second itmes
 btn.addEventListener('mouseover',  (e) => {
     btn.style.backgroundColor = "yellow";
