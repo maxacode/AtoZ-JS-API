@@ -105,6 +105,7 @@ itemList.addEventListener('click', delItem);
 itemsDeleted.addEventListener('click', returnToDoFromDeleted);
 
 
+//allItems[0].style.display = 'none';
 
 function filter() {
     userInput = searchBox.value;
