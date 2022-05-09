@@ -73,15 +73,26 @@
 
 //my name diff color. 
 var myname = document.getElementById('my-name');
-myname.style.color = 'blue';
+myname.style.color = 'pink';
 myname.style.fontWeight = 'bold';
 var form = document.getElementById('addForm');
 var itemList = document.getElementById('items');
-var textBox = document.getElementById('item');
+var textBox = document.getElementById('textBox');
 var itemsDeleted = document.getElementById('itemsDeleted');
 var searchBox = document.getElementById('filter');
 var allItems = document.getElementsByClassName('list-group-item');
 
+
+textBox.addEventListener('click', (e) => {
+    if(textBox.value == 'Enter Here') {
+        textBox.value = "";
+    }
+});
+textBox.addEventListener('mouseout', () => { 
+    if (textBox.value == "") {
+        textBox.value = "Enter Here";
+}
+});
 // filter key down event. 
 searchBox.addEventListener('input', filter);
 
@@ -90,6 +101,9 @@ form.addEventListener('submit', addItem);
 
 // if del button is clicked
 itemList.addEventListener('click', delItem);
+
+itemsDeleted.addEventListener('click', returnToDoFromDeleted);
+
 
 
 function filter() {
@@ -126,6 +140,7 @@ function addItem (e) {
 
     //adding new Li to Ul list
     itemList.appendChild(newLi);
+    textBox.value = "";
 }
 
 
@@ -136,12 +151,29 @@ function delItem(e) {
         //if(confirm('Are you sure you want to delete')){
         var li = e.target.parentElement;
         li.style.textDecoration = 'line-through';
+        console.log(e.target.className); 
+        //changing to UNDO instead of delete and undo in button Text. 
+        e.target.className = 'btn btn-danger btn-sm float-right undo';
+        e.target.innerText = 'Undo';
         itemList.removeChild(li);
-        //ading to Delted Items list. with Line Through. 
-        itemsDeleted.appendChild(li);
+        //ading to Delted Items on top of list. with Line Through. 
+        itemsDeleted.insertBefore(li, itemsDeleted.firstChild);
         
-        li.remove;
+        //Note surte what this does li.remove;
         //}
     }
 }
- 
+
+function returnToDoFromDeleted(e) {
+    if (e.target.classList.contains('undo')){
+        var li = e.target.parentElement;
+        li.style.textDecoration = 'none';
+        //console.log(e.target.className);
+        // chanign back to delete class and X letter in button 
+        e.target.className = 'btn btn-danger btn-sm float-right delete';
+        e.target.innerText = 'X';
+
+        itemsDeleted.removeChild(li);
+        itemList.appendChild(li);
+    }
+}
