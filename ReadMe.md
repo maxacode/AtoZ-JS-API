@@ -49,10 +49,14 @@ function cl(variable) {
 
 - <https://www.w3schools.com/js/js_loop_for.asp>
 
+### addEventListener all options
+- https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
 ### Mouse Events
 - https://developer.mozilla.org/en-US/docs/Web/API/Element#mouse_events
 - https://stackoverflow.com/questions/1819878/changing-button-color-programmatically
 - https://www.w3schools.com/jsref/event_clienty.asp
+- https://stackoverflow.com/questions/12024483/how-to-pass-parameter-to-function-using-in-addeventlistener
 
 ### Text box
 - https://stackoverflow.com/questions/15404330/change-input-text-border-color-without-changing-its-height
@@ -63,4 +67,5 @@ function cl(variable) {
 
 ### Modifying Documents: 
 - https://javascript.info/modifying-document
+
 
