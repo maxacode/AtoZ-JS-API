@@ -2,11 +2,30 @@
 
 # MUst Read: 
 - https://javascript.info/modifying-document
+- "const sortedCompany = companies.sort(function(c1, c2)"
+- tertiary - Lambdas in python?? ex: "const sortedCompany = companies.sort((a,b) => a.start > b.start ? 1 : -1 );" 
+
 
 ## Starting up
 - github: https://github.com/cloudmaksd/AtoZ-JS-API
 
 - http-server in directory
+
+## Console shortcuts
+//cj(companiesStarted80s);
+// ct(companiesStarted80s);
+// cl(companiesStarted80s);
+function cj(variable) {
+    return console.log(JSON.stringify(variable, true, 3));
+};
+
+function ct(variable) {
+    return console.table(variable);
+};
+
+function cl(variable) {
+    return console.log(variable);
+}
 
 ### Index
 
@@ -44,3 +63,4 @@
 
 ### Modifying Documents: 
 - https://javascript.info/modifying-document
+
